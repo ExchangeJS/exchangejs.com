@@ -53,18 +53,20 @@ if (app.get('env') === 'development') {
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-  switch(res.status) {
-    case 404:
-      res.render('error', {
-        message: '404. The page you are looking for cannot be found.'
-      });
-      break;
+    switch(err.status) {
+        case 404:
+            res.status(404);
+            res.render('error', {
+              message: '404. The page you are looking for cannot be found.'
+            });
+            break;
 
-    default:
-      res.render('error', {
-        message: 'Internal server error. The page cannot be rendered.'
-      })
-  }
+        default:
+            res.status(500);
+            res.render('error', {
+              message: 'Internal server error. The page cannot be rendered.'
+            })
+    }
 });
 
 
