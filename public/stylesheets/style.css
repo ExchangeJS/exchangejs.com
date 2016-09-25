@@ -1,8 +1,41 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.colOpenGraphic {
+  margin-bottom: 20px;
+  display: block;
 }
-
-a {
-  color: #00B7FF;
+.bigTime,
+.bigWhat {
+  font-size: 2em;
+  font-weight: bold;
+  height: 58px;
+  line-height: 58px;
+  display: inline-block;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+.body {
+  margin-bottom: 30px;
+}
+.bigWhat {
+  background-color: #333333;
+  color: #EEEEEE;
+}
+.bigTime {
+  background-color: #FFCC00;
+}
+.jumbotron.header {
+  background-color: #FFCC00;
+}
+.jumbotron.footer {
+  background-color: #333333;
+  color: #EEEEEE;
+  margin-bottom: 0;
+}
+.jumbotron.footer iframe {
+  width: 100% !important;
+}
+.sw {
+  display: none;
+}
+.service-workers .sw {
+  display: block;
 }

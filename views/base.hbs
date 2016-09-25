@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edmonton's JavaScript Community - Exchange.js</title>
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <script>
+      var addy = window.location.href;
+      if (addy.indexOf('http://www.exchangejs.com') === 0) {
+          window.location.href = addy.replace(/^http/, 'https');
+      }
+  </script>
+</head>
+<body>
+
+  <div class="jumbotron header">
+    <div class="container">
+      <!-- <img src="https://www.exchangejs.com/ejs.png" /> -->
+      <h1>Exchange.js</h1>
+      <h2>Edmonton's JavaScript Community</h2>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="container">
+
+      {{{body}}}
+
+    </div>
+  </div>
+
+  <div class="jumbotron footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-lg-3">
+          <h3>Sponsors</h3>
+          <ul class="list-unstyled">
+            <li><a href="https://www.bioware.com/" target="_blank">Bioware</a></li>
+            <li><a href="https://www.startupedmonton.com/" target="_blank">Startup Edmonton</a></li>
+            <li><a href="https://www.redmantech.com/" target="_blank">Redman Technologies</a></li>
+            <li><a href="./sponsorship.html">Become a sponsor!</a></li>
+          </ul>
+          <h3 id="organizers">Organizers</h3>
+          <ul class="list-unstyled">
+            <li><a href="https://twitter.com/abramh" target="_blank">Abram Hindle</a></li>
+            <li><a href="https://twitter.com/MarkBennett" target="_blank">Mark Bennett</a></li>
+            <li><a href="hhttps://twitter.com/seanhealy" target="_blank">Sean Healy</a></li>
+            <li><a href="https://twitter.com/skepticsean" target="_blank">Sean Ouimet</a></li>
+            <li><a href="https://twitter.com/MHerszak" target="_blank">Michel Herszak</a></li>
+            <li><a href="https://twitter.com/caydenberg" target="_blank">Casey Ydenberg</a></li>
+            <li><a href="https://github.com/PawkaHub" target="_blank">Pieter Parker</a></li>
+          </ul>
+        </div>
+        <div class="col-md-8 col-lg-offset-1 col-lg-7">
+          <a class="twitter-timeline" width="750" height="500" data-dnt="true" href="https://twitter.com/EdmontonJS" data-chrome="noborders" data-widget-id="383053934534737920">Tweets by @EdmontonJS</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sw">
+    <input type="button" id="sw-ping" value="Ping">
+  </div>
+
+  <script src="./javascripts/index.bundle.js"></script>
+</body>
+</html>
