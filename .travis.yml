@@ -3,6 +3,7 @@ node_js: '6'
 install:
   - npm i -g yarn
   - yarn install
+script: yard run test
 deploy:
   provider: heroku
   app: hidden-hamlet-51530
