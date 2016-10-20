@@ -1,7 +1,20 @@
 language: node_js
 node_js: '6'
+install: yarn install
+script: exit 0
 deploy:
   provider: heroku
   app: hidden-hamlet-51530
   api_key:
     secure: KG0z+sYMjK3M7Sqe1TV67ccMuS96z+YI3QCJVgHUQA1x2zC4h8YKnCyTQ++SOvEqE40GN7bYHRWhqasSUpaVpkd/iOFBlsGYKKVCvZSO0DiEU+6rvu1v2RIblFSS7IQGg2CkJYmVZ6/uW7e1bhIwHCQjtP/ED1Ab6NlVeXKkeK1UCHorOUjJ0VoMU9yCHmcmcHDQvtHgBx3pPxq8IG/prXGLwL3HeXx/6ckAPaIXiXq8uG9Mjq8D6Lq2GpZvzDrmJjaa6oL/zojSB8+ITXpJUqbk1zX6PCf6XRvpq8O8ntTXMim1G+kjfQ2skizC/aK34BM4yd9cGpxet5P8PJWiMA2kf+AlPcir1geWoyJzTic9OC7lMjmVwDrLAr3cZV3Tl41e3WRTFURvNliUDhOvC7j6WcgK7JEVwxe61kpFrlbQn1dk5EEVuPIW8/17rm0NrqZggazrTnacWHC2cA2s1We8riGSoyXKaxvfbb1OUyqIql5sRXJh3OT2UT7w88OMO37BpAjmrBRdslymyL6tImZ4oHhVNdS/ruXVjkh2KXu0bXkPZBUXs0p1mDSMZAQYD2hTz2Cf9ojtvLdjUVq/+sHIuaPiNVWxFsMPjgQ2og9EHKCkZetHTHcRAdmAIIKVI6NMWo+tUHD2mjt8kYSPtYt0k6TMxP4kSP+zDi0T1Rs=
+before_install:
+  # Repo for newer Node.js versions
+  - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  # Repo for Yarn
+  - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
+  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  - sudo apt-get update -qq
+  - sudo apt-get install -y -qq yarn
+cache:
+  directories:
+  - $HOME/.yarn-cache
