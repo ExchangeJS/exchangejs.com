@@ -1,6 +1,8 @@
 language: node_js
 node_js: '6'
-install: yarn install
+install:
+  - npm i -g yarn
+  - yarn install
 deploy:
   provider: heroku
   app: hidden-hamlet-51530
