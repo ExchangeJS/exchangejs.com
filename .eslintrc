@@ -1,0 +1,17 @@
+{
+  "env": {
+    "es6": true,
+    "commonjs": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "jQuery": true,
+    "$": true,
+    "hljs": true
+  },
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "no-console": 0
+  }
+}
