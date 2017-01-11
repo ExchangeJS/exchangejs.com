@@ -34,7 +34,6 @@ app.use(session({
   secret: process.env.COOKIE_SECRET
 }));
 
-app.use('/', routes);
 
 keystone.init({
   'env': process.env.NODE_ENV,
@@ -53,8 +52,12 @@ keystone.init({
 keystone.import('models');
 
 keystone.set('app', app);
+
+app.use('/', routes(keystone));
+
 app.use('/keystone', require('keystone/admin/server/app/createStaticRouter.js')(keystone));
 app.use('/keystone', require('keystone/admin/server/app/createDynamicRouter.js')(keystone));
 
+// add 404 routes
 
 keystone.start();

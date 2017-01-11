@@ -1,13 +1,27 @@
 var express = require('express');
-var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', {title: 'Exchange.js'});
-});
+module.exports = (keystone) => {
+  let router = express.Router();
 
-router.get('/code-of-conduct', function(req, res) {
-  res.render('code-of-conduct', {title: 'Code of Conduct'});
-});
+  /* GET home page. */
+  router.get('/', function(req, res) {
+    res.render('index', {title: 'Exchange.js'});
+  });
 
-module.exports = router;
+  router.get('/:page', function(req, res, next) {
+    keystone.list('Page').model.findOne({
+      state: 'published',
+      slug: req.params.page
+    }).exec(function(err, result) {
+      if (!result) {
+        return next();
+      }
+      res.render('page', {
+        title: result.title,
+        content: result.content.html
+      });
+    });
+  });
+
+  return router;
+}
