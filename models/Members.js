@@ -6,8 +6,8 @@ var Types = keystone.Field.Types;
  * ==========
  */
 
-var Member = new keystone.List('Page', {
-	map: { name: 'title' },
+var Member = new keystone.List('Member', {
+	map: { name: 'name' },
 	autokey: { path: 'slug', from: 'name', unique: true }
 });
 
@@ -15,8 +15,9 @@ Member.add({
 	name: { type: String, required: true },
   avatarUrl: { type: Types.Url },
   bio: { type: Types.Text },
-  twitter: { type: Type.Text },
-  github: { type: Type.Text }
+  email: { type: Types.Email },
+  twitter: { type: Types.Text },
+  github: { type: Types.Text }
 });
 
 Member.defaultColumns = 'name|20%';

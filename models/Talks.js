@@ -6,7 +6,7 @@ var Types = keystone.Field.Types;
  * ==========
  */
 
-var Talk = new keystone.List('Page', {
+var Talk = new keystone.List('Talk', {
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true }
 });
@@ -14,8 +14,9 @@ var Talk = new keystone.List('Page', {
 Talk.add({
 	title: { type: String, required: true },
 	description: { type: Types.Textarea, height: 400 },
-  speaker: { type: Types.Relationship, ref: 'Member' },
-	youtubeVideoId: { type: Types.Text }
+	speaker: { type: Types.Relationship, ref: 'Member' },
+	youtubeVideoId: { type: Types.Text },
+	presentedOn: { type: Types.Date }
 });
 
 Talk.defaultColumns = 'title, state|20%';
