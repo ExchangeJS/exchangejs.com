@@ -52,7 +52,7 @@
 	// be aware that any global state is likely to disappear
 	console.log("SW startup");
 	
-	var CACHE_VERSION = (78
+	var CACHE_VERSION = (86
 	);
 	
 	function cacheName(version) {
@@ -68,7 +68,7 @@
 	
 	function cacheRequests(cache) {
 	  console.log("Caching requests");
-	  return cache.addAll(URLS_TO_CACHE.concat(([".DS_Store",".env",".env_example",".travis.yml","LICENSE","app.js","models","npm-debug.log","public","routes","updates","views","yarn.lock"])));
+	  return cache.addAll(URLS_TO_CACHE.concat(([".DS_Store",".env",".env_example",".travis.yml","LICENSE","app.js","models","public","routes","updates","views","yarn.lock"])));
 	}
 	
 	function clearOldCaches(storage, cache_name) {
@@ -87,19 +87,19 @@
 	function refreshCache() {
 	  console.log("Refreshing cache..");
 	  return openCache(caches, cacheName(CACHE_VERSION)).then(function (_ref) {
-	    var _ref2 = _slicedToArray(_ref, 3);
+	    var _ref2 = _slicedToArray(_ref, 3),
+	        storage = _ref2[0],
+	        cache = _ref2[1],
+	        cache_name = _ref2[2];
 	
-	    var storage = _ref2[0];
-	    var cache = _ref2[1];
-	    var cache_name = _ref2[2];
 	    return cacheRequests(cache).then(function (_) {
 	      return [storage, cache_name];
 	    });
 	  }).then(function (_ref3) {
-	    var _ref4 = _slicedToArray(_ref3, 2);
+	    var _ref4 = _slicedToArray(_ref3, 2),
+	        storage = _ref4[0],
+	        cache_name = _ref4[1];
 	
-	    var storage = _ref4[0];
-	    var cache_name = _ref4[1];
 	    return clearOldCaches(storage, cache_name);
 	  });
 	}
