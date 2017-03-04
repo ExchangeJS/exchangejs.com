@@ -1,0 +1,17 @@
+{{!< base.hbs}}
+
+<h2>The talks page</h2>
+
+<div class="columns">
+
+  {{# each talks}}
+    <article class="talk">
+      <h3 class="talk__title">{{title}}</h3>
+      <p><strong>Speaker:</strong> {{speaker.name}}</p>
+      <p><strong>Date:</strong> Need a helpers</p>
+      <p class="talk__description">{{description}}</p>
+      <a href="#">Video</a>
+    </article>
+  {{/ each}}
+
+</div>
