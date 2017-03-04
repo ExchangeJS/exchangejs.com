@@ -52,7 +52,7 @@
 	// be aware that any global state is likely to disappear
 	console.log("SW startup");
 	
-	var CACHE_VERSION = (6
+	var CACHE_VERSION = (78
 	);
 	
 	function cacheName(version) {
@@ -68,7 +68,7 @@
 	
 	function cacheRequests(cache) {
 	  console.log("Caching requests");
-	  return cache.addAll(URLS_TO_CACHE.concat(([".travis.yml","LICENSE","app.js","bin","public","routes","views"])));
+	  return cache.addAll(URLS_TO_CACHE.concat(([".DS_Store",".env",".env_example",".travis.yml","LICENSE","app.js","models","npm-debug.log","public","routes","updates","views","yarn.lock"])));
 	}
 	
 	function clearOldCaches(storage, cache_name) {
