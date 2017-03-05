@@ -44,10 +44,28 @@
 /* 0 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
+	
+	jQuery.fn.startVideoInModal = function (modalSelector, videoSelector) {
+		var URL_BASE = 'https://www.youtube.com/embed/';
+	
+		$(modalSelector).on('hide.bs.modal', function () {
+			$(videoSelector).attr('src', '');
+			return true;
+		});
+	
+		return this.click(function (e) {
+			e.preventDefault();
+	
+			var src = URL_BASE + $(this).data('video-id') + '?rel=0&autoplay=1';
+			$(modalSelector).modal('show').on('shown.bs.modal', function () {
+				$(videoSelector).attr('src', src);
+			});
+		});
+	};
 	
 	jQuery(document).ready(function ($) {
-		console.log($);
+		$('.talk__videoLink').startVideoInModal('#video-modal', '#video-iframe');
 	});
 
 /***/ }

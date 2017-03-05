@@ -65,6 +65,10 @@ i {
   color: #449d44;
 }
 
+.video .modal-dialog {
+  width: 90vw;
+}
+
 @media (min-width: 768px) {
   .columns {
     column-count: 2;

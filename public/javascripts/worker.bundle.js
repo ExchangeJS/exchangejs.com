@@ -52,7 +52,7 @@
 	// be aware that any global state is likely to disappear
 	console.log("SW startup");
 	
-	var CACHE_VERSION = (86
+	var CACHE_VERSION = (91
 	);
 	
 	function cacheName(version) {
