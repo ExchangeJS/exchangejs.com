@@ -1,3 +1,9 @@
+i {
+  line-height: 1;
+  height: 1em;
+  width: 1em;
+}
+
 .colOpenGraphic {
   margin-bottom: 20px;
   display: block;
@@ -38,4 +44,29 @@
 }
 .service-workers .sw {
   display: block;
+}
+
+.talk {
+  margin: 2rem 0;
+  display: inline-block;
+  width: 100%;
+}
+.talk__title,
+.talk__meta,
+.talk__description {
+  margin: 0rem;
+}
+.talk__videoLink {
+  float: right;
+  font-size: 100px;
+  color: #5cb85c;
+}
+.talk__videoLink::hover {
+  color: #449d44;
+}
+
+@media (min-width: 768px) {
+  .columns {
+    column-count: 2;
+  }
 }

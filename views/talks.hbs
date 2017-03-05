@@ -1,17 +1,28 @@
 {{!< base.hbs}}
 
-<h2>The talks page</h2>
+<h2>Talks</h2>
 
 <div class="columns">
 
   {{# each talks}}
     <article class="talk">
+      <a href="https://www.youtube.com/watch?v={{youtubeVideoId}}" class="talk__videoLink" data-video-id="{{youtubeVideoId}}" target="_blank">
+        <i class="glyphicon glyphicon-facetime-video"></i>
+      </a>
+      <p class="talk__meta">{{date presentedOn format="MMM YYYY"}}</p>
       <h3 class="talk__title">{{title}}</h3>
-      <p><strong>Speaker:</strong> {{speaker.name}}</p>
-      <p><strong>Date:</strong> Need a helpers</p>
+      <p class="talk__meta"><strong>{{speaker.name}}</strong></p>
       <p class="talk__description">{{description}}</p>
-      <a href="#">Video</a>
     </article>
   {{/ each}}
 
 </div>
+
+<div class="modal fade" tabindex="-1" id="video-modal" aria-label="Video popup">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content embed-responsive" style="padding-bottom:56%">
+      <iframe id="video" class="embed-responsive-item" width="100%" frameborder="0" src="">
+      </iframe>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
