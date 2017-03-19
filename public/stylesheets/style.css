@@ -47,9 +47,8 @@ i {
 }
 
 .talk {
-  margin: 2rem 0;
-  display: inline-block;
-  width: 100%;
+  margin-bottom: 2rem;
+  display: block;
 }
 .talk__title,
 .talk__meta,
@@ -58,7 +57,7 @@ i {
 }
 .talk__videoLink {
   float: right;
-  font-size: 100px;
+  font-size: 50px;
   color: #5cb85c;
 }
 .talk__videoLink::hover {
