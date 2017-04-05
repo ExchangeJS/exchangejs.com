@@ -46,6 +46,10 @@ i {
   display: block;
 }
 
+.youtube-btn-wrapper {
+  margin-bottom: 3rem;
+}
+
 .talk {
   margin-bottom: 2rem;
   display: block;
