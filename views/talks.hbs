@@ -12,6 +12,17 @@
 
   {{# each talks}}
     <article class="talk col-xs-12 col-xs-offset-0 col-md-4 col-md-offset-1">
+      <!-- NOT AT MY COMPUTER RIGHT NOW, BUT I DISCOVERED YOU CAN GET YOUTUBE THUMBNAILS FROM URLS LIKE THIS:
+      
+          https://img.youtube.com/vi/<insert-youtube-video-id-here>/hqdefault.jpg
+          
+          DETAILS FROM:
+          
+          http://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
+          
+          WE CAN USE THIS TO ADD SCREENSHOTS TO THE LAYOUT.. -Mark
+      
+      -->
       <a href="https://www.youtube.com/watch?v={{youtubeVideoId}}" class="talk__videoLink" data-video-id="{{youtubeVideoId}}" target="_blank">
         <i class="glyphicon glyphicon-facetime-video"></i>
       </a>
