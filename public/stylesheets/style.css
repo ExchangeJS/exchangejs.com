@@ -50,9 +50,20 @@ i {
   margin-bottom: 3rem;
 }
 
+
+.talks {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .talk {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+  width: 390px;
   display: block;
+  flex: 1 1 auto;
+  padding: 0 1rem;
 }
 .talk__title,
 .talk__meta,
@@ -60,9 +71,8 @@ i {
   margin: 0rem;
 }
 .talk__videoLink {
-  float: right;
-  font-size: 50px;
-  color: #5cb85c;
+  color: inherit;
+  text-decoration: none;
 }
 .talk__videoLink::hover {
   color: #449d44;
