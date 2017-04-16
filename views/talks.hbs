@@ -8,17 +8,17 @@
   </a>
 </p>
 
-<div class="row">
+<div class="talks">
 
   {{# each talks}}
-    <article class="talk col-xs-12 col-xs-offset-0 col-md-4 col-md-offset-1">
+    <article class="talk">
       <a href="https://www.youtube.com/watch?v={{youtubeVideoId}}" class="talk__videoLink" data-video-id="{{youtubeVideoId}}" target="_blank">
-        <i class="glyphicon glyphicon-facetime-video"></i>
+        <img src="https://img.youtube.com/vi/{{youtubeVideoId}}/0.jpg" alt="Thumbnail of {{title}}" />
+        <p class="talk__meta">{{date presentedOn format="MMM YYYY"}}</p>
+        <h3 class="talk__title">{{title}}</h3>
+        <p class="talk__meta"><strong>{{speaker.name}}</strong></p>
+        <p class="talk__description">{{description}}</p>
       </a>
-      <p class="talk__meta">{{date presentedOn format="MMM YYYY"}}</p>
-      <h3 class="talk__title">{{title}}</h3>
-      <p class="talk__meta"><strong>{{speaker.name}}</strong></p>
-      <p class="talk__description">{{description}}</p>
     </article>
   {{/ each}}
 
