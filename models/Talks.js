@@ -14,7 +14,7 @@ var Talk = new keystone.List('Talk', {
 Talk.add({
 	title: { type: String, required: true },
 	description: { type: Types.Textarea, height: 400 },
-	speaker: { type: Types.Relationship, ref: 'Member' },
+	speaker: { type: Types.Relationship, ref: 'User' },
 	youtubeVideoId: { type: Types.Text },
 	presentedOn: { type: Types.Date }
 });
