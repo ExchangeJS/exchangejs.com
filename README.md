@@ -8,7 +8,7 @@ We are tracking all issues on the [exchangejs.github.io repository](https://gith
 
 Before trying to get started, make sure you've installed:
 
- * [Node.js] (https://nodejs.org/en/download/)
+ * [Node.js](https://nodejs.org/en/download/)
  * [Yarn package manager](https://yarnpkg.com/en/docs/install)
 
 First, install your dependencies:
