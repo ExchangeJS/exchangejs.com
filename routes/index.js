@@ -35,5 +35,11 @@ module.exports = (keystone) => {
 		});
 	});
 
+	// REDIRECT TO DEMO NIGHT VOTE FORM
+	// REMOVE AFTER MAY 4TH 2017
+	router.get('/vote', function(req, res) {
+		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLScCJjxmCA8Zg4ONi0UzV32d59-j1w0cHKgQK4iDMdE9EJZdvQ/viewform?usp=sf_link');
+	});
+
 	return router;
 }
