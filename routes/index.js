@@ -35,10 +35,10 @@ module.exports = (keystone) => {
 		});
 	});
 
-	// REDIRECT TO DEMO NIGHT VOTE FORM
-	// REMOVE AFTER MAY 4TH 2017
-	router.get('/vote', function(req, res) {
-		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLScCJjxmCA8Zg4ONi0UzV32d59-j1w0cHKgQK4iDMdE9EJZdvQ/viewform?usp=sf_link');
+	// REDIRECT TO JUNE 2017 MEMBER SURVEY
+	// REMOVE AFTER JUNE 1st, 2017
+	router.get('/survey', function(req, res) {
+		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSdgVccwM-4LXiOx87v9dY9WyLnUO767Hj-7Aaw56jitVYUd9w/viewform?usp=sf_link');
 	});
 
 	return router;
