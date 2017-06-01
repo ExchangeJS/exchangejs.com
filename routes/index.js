@@ -40,6 +40,11 @@ module.exports = (keystone) => {
 	router.get('/survey', function(req, res) {
 		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSdgVccwM-4LXiOx87v9dY9WyLnUO767Hj-7Aaw56jitVYUd9w/viewform?usp=sf_link');
 	});
+	
+	
+	router.get('/issues', function(req, res) {
+		res.redirect('https://github.com/ExchangeJS/exchangejs-org/issues');
+	});
 
 	return router;
 }
