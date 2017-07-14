@@ -44,13 +44,6 @@ module.exports = (keystone) => {
 			});
 		});
 	});
-
-	// REDIRECT TO JUNE 2017 MEMBER SURVEY
-	// REMOVE AFTER JUNE 1st, 2017
-	router.get('/survey', function(req, res) {
-		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSdgVccwM-4LXiOx87v9dY9WyLnUO767Hj-7Aaw56jitVYUd9w/viewform?usp=sf_link');
-	});
-	
 	
 	router.get('/issues', function(req, res) {
 		res.redirect('https://github.com/ExchangeJS/exchangejs-org/issues');
