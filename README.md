@@ -24,13 +24,13 @@ Crop here create a copy of the `.env` that configures environmental variables fo
 
     cp .env_example .env
 
-Edit it and update your MONGODB, COOKIE_SECRET, and URL settings.
-
-The last thing you need to do is update the admin user that will be created the first time you start your app. For now, this is set in `/updates/0.0.1-admins.js`. Ideally, we will prompt for admin user settings on first run. [(See issue #94)](https://github.com/ExchangeJS/exchangejs-org/issues/94).
+Edit it and update your MONGO_URI, COOKIE_SECRET, and URL settings.
 
 You can then run the local development server with:
 
     yarn dev
+
+Once the app is running, go to your localhost:3000/keystone (or, if you changed the URL or port in the config file, whatever is appropriate) and login with 'user@example.com' and 'admin' as the password. Once logged in, select Users and change your information.
 
 To deploy your changes just push to GitHub. Once they're merged into master
 they'll deploy to Heroku and our site automatically in a few minutes.
