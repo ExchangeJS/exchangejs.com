@@ -178,10 +178,12 @@
       </ul>
     </section>
 
+    {{# each talks}}
     <section class="col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-1">
-      <h2>Talks</h2>
+      <a href="https://youtube.com/watch?id={{youtubeVideoId}}"></a>
+      <h2>{{title}}</h2>
+      <p>by <em>{{speaker.name.first}} {{speaker.name.last}}</em> on {{presentedOn}}</p>
+      <img src="youtube url for thumbnal">
     </section>
-
-    <section class="col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-1">
-    </section>
+    {{/ each}}
   </div>

@@ -5,14 +5,17 @@ module.exports = (keystone) => {
 
 	/* GET home page. */
 	router.get('/', function(req, res) {
-		keystone.list('Job').model.find().limit(5).
-			then((jobs) => {
-				res.render('index', {
-					title: 'Exchange.js',
-					jobs: jobs
-				});
-			}).
-			catch((err) => { throw err; });
+		let jobs = keystone.list('Job').model.find().limit(5);
+		let talks = keystone.list('Talk').model.find().
+			sort('-presentedOn').limit(2).populate('speaker');
+
+		Promise.all([jobs, talks]).then(([jobs, talks]) => {
+			res.render('index', {
+				title: 'Exchange.js',
+				jobs: jobs,
+				talks: talks
+			});
+		});
 	});
 
 	router.get('/talks', (req, res) => {
