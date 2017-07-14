@@ -44,6 +44,25 @@ module.exports = (keystone) => {
 			});
 		});
 	});
+
+	routeer.get('jobs/:slug', (req, res, next) => {
+		keystone.list('Job').model.findOne({
+			slog: req.params.slug
+		}).
+		then((result) => {
+			if (!result) {
+				return next();
+			}
+
+			let job = {
+				title: result.title,
+				company: result.company,
+				location: result.location
+			};
+
+			res.render('job', job);
+		});
+	});
 	
 	router.get('/issues', function(req, res) {
 		res.redirect('https://github.com/ExchangeJS/exchangejs-org/issues');
