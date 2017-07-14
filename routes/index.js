@@ -5,7 +5,14 @@ module.exports = (keystone) => {
 
 	/* GET home page. */
 	router.get('/', function(req, res) {
-		res.render('index', {title: 'Exchange.js'});
+		keystone.list('Job').model.find().limit(5).
+			then((jobs) => {
+				res.render('index', {
+					title: 'Exchange.js',
+					jobs: jobs
+				});
+			}).
+			catch((err) => { throw err; });
 	});
 
 	router.get('/talks', (req, res) => {
