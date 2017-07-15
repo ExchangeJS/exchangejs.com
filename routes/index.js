@@ -5,7 +5,8 @@ module.exports = (keystone) => {
 
 	/* GET home page. */
 	router.get('/', function(req, res) {
-		let jobs = keystone.list('Job').model.find().limit(5);
+		let jobs = keystone.list('Job').model.
+			find({state: 'published', expires_on: { $gt: new Date() } }).limit(5);
 		let talks = keystone.list('Talk').model.find().
 			sort('-presentedOn').limit(2).populate('speaker');
 
