@@ -32,5 +32,5 @@ Job.add({
   email_to_apply: { type: Types.Email, required: true, initial: true } 
 });
 
-Job.defaultColumns = 'title, company, state|20%, expires_on';  
+Job.defaultColumns = 'title, company, state|20%, expires_on';
 Job.register();
