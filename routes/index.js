@@ -45,9 +45,9 @@ module.exports = (keystone) => {
 		});
 	});
 
-	router.get('jobs/:slug', (req, res, next) => {
+	router.get('/jobs/:slug', (req, res, next) => {
 		keystone.list('Job').model.findOne({
-			slog: req.params.slug
+			slug: req.params.slug
 		}).
 		then((result) => {
 			if (!result) {
