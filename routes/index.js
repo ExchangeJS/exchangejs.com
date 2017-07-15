@@ -49,16 +49,10 @@ module.exports = (keystone) => {
 		keystone.list('Job').model.findOne({
 			slug: req.params.slug
 		}).
-		then((result) => {
-			if (!result) {
+		then((job) => {
+			if (!job) {
 				return next();
 			}
-
-			let job = {
-				title: result.title,
-				company: result.company,
-				location: result.location
-			};
 
 			res.render('job', job);
 		});
