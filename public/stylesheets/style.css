@@ -4,6 +4,10 @@ i {
   width: 1em;
 }
 
+a.natural {
+  color: inherit;
+}
+
 img {
   max-width: 100%;
 }
