@@ -4,6 +4,10 @@ i {
   width: 1em;
 }
 
+a.natural {
+  color: inherit;
+}
+
 img {
   max-width: 100%;
 }
@@ -91,4 +95,8 @@ img {
   .columns {
     column-count: 2;
   }
+}
+
+.index_talks img {
+  width: 100%;
 }

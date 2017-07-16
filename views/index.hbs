@@ -14,7 +14,9 @@
       <p>
         Talks range from beginner to advanced and include the full stack of popular JavaScript
         technologies from jQuery to CoffeeScript to Node.js. It is also common to hear topics covering
-        wider Web-technology trends and evolving standards.
+        wider Web-technology trends and evolving standards. <a href="https://docs.google.com/spreadsheets/d/1_FOG1K_fUbTlNvqT9hjihiXYt9AhPkZxW6tfZN858VU/edit?usp=sharing" target="_blank" rel="noopener">Sign up to talk</a>, or
+        <a href="https://github.com/ExchangeJS/exchangejs-org/issues/new?title=(YOUR%20TALK%20NAME%20HERE)&body=What,%20why,%20who?&labels=talk-ideas" target="_blank" rel="noopener">
+        share an idea for a talk!</a>
       </p>
       <p>
         The format can change month-to-month, but generally includes industry news and community announcements,
@@ -162,4 +164,33 @@
       </ul>
     </section>
 
+  </div>
+
+  <div class="row">
+    <section class="col-md-4">
+      <h2>Jobs</h2>
+      <ul class="list-unstyled">
+        {{# each jobs}}
+        <li>
+          <a href="/jobs/{{slug}}"><strong>{{title}}</strong> at {{company}}</a>
+        </li>
+        {{/ each}}
+        <li><a href="/jobs">More...</a></li>
+      </ul>
+      <a href="mailto:mark.f.bennett+ejs-jobs@gmail.com" class="btn btn-default">Submit your job!</a>
+    </section>
+
+    <section class="col-md-8">
+      <h2><a class="natural" href="/talks">Talks</a></h2>
+      <div class="row">
+        {{# each talks}}
+        <div class="col-sm-6">
+          <a href="https://www.youtube.com/watch?v={{youtubeVideoId}}">
+            <p><strong>{{title}}</strong> by <em>{{speaker.name.first}}</em></p>
+            <img src="https://img.youtube.com/vi/{{youtubeVideoId}}/hqdefault.jpg">
+          </a>
+        </div>
+        {{/ each}}
+      </div>
+    </section>
   </div>

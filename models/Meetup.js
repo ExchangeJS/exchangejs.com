@@ -7,14 +7,14 @@ var Types = keystone.Field.Types;
  */
 
 var Meetup = new keystone.List('Meetup', {
-  map: { name: 'date' },
+	map: { name: 'date' },
 });
 
 Meetup.add({
-  date: { type: Types.Date, required: true },
-  meetup: { type: Types.Url },
-  notes: { type: Types.Url },
-  video: { type: Types.Url }
+	date: { type: Types.Date, required: true },
+	meetup: { type: Types.Url },
+	notes: { type: Types.Url },
+	video: { type: Types.Url }
 });
 
 Meetup.defaultColumns = 'date';

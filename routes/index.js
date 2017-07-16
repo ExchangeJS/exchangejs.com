@@ -5,7 +5,18 @@ module.exports = (keystone) => {
 
 	/* GET home page. */
 	router.get('/', function(req, res) {
-		res.render('index', {title: 'Exchange.js'});
+		let jobs = keystone.list('Job').model.
+			find({state: 'published', expires_on: { $gt: new Date() } }).limit(5);
+		let talks = keystone.list('Talk').model.find().
+			sort('-presentedOn').limit(2).populate('speaker');
+
+		Promise.all([jobs, talks]).then(([jobs, talks]) => {
+			res.render('index', {
+				title: 'Exchange.js',
+				jobs: jobs,
+				talks: talks
+			});
+		});
 	});
 
 	router.get('/talks', (req, res) => {
@@ -35,12 +46,27 @@ module.exports = (keystone) => {
 		});
 	});
 
-	// REDIRECT TO JUNE 2017 MEMBER SURVEY
-	// REMOVE AFTER JUNE 1st, 2017
-	router.get('/survey', function(req, res) {
-		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSdgVccwM-4LXiOx87v9dY9WyLnUO767Hj-7Aaw56jitVYUd9w/viewform?usp=sf_link');
+	router.get('/jobs', (req, res, next) => {
+		let jobs = keystone.list('Job').model.
+			find({state: 'published', expires_on: { $gt: new Date() } });
+		
+		jobs.then((jobs) => {
+			res.render('jobs', { title: "Job Listings", jobs });
+		});
 	});
-	
+
+	router.get('/jobs/:slug', (req, res, next) => {
+		keystone.list('Job').model.findOne({
+			slug: req.params.slug
+		}).
+		then((job) => {
+			if (!job) {
+				return next();
+			}
+
+			res.render('job', job);
+		});
+	});
 	
 	router.get('/issues', function(req, res) {
 		res.redirect('https://github.com/ExchangeJS/exchangejs-org/issues');
