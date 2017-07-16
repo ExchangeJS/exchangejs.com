@@ -93,16 +93,6 @@ img {
   }
 }
 
-.index_talks {
-  display: block;
-}
-
-.index_talks li {
-  display: inline-block;
-  width: 45%;
-  margin: 0 10px 0 0;
-}
-
 .index_talks img {
   width: 100%;
 }

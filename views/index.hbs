@@ -167,8 +167,16 @@
   </div>
 
   <div class="row">
-    <section class="col-md-4 col-lg-3">
+    <section class="col-md-4 col-lg-4">
       <h2>Jobs</h2>
+    </section>
+    <section class="col-md-8 col-lg-8">
+      <h2>Talks</h2>
+    </section>
+  </div>
+
+  <div class="row">
+    <section class="col-md-4 col-lg-4">
       <ul class="list-unstyled">
         {{# each jobs}}
         <li>
@@ -178,17 +186,12 @@
       </ul>
     </section>
 
-    <section class="col-md-8 col-md-offset-0 col-lg-6 col-lg-offset-1">
-      <h2>Talks</h2>
-      <ul class="list-unstyled index_talks">
-      {{# each talks}}
-        <li>
-          <a href="https://www.youtube.com/watch?v={{youtubeVideoId}}">
-            <p><strong>{{title}}</strong> by <em>{{speaker.name.first}}</p>
-            <img src="https://img.youtube.com/vi/{{youtubeVideoId}}/hqdefault.jpg">
-          </a>
-        </li>
-      {{/ each}}
-      </ul>
+    {{# each talks}}
+    <section class="col-md-4 col-lg-4">
+      <a href="https://www.youtube.com/watch?v={{youtubeVideoId}}">
+        <p><strong>{{title}}</strong> by <em>{{speaker.name.first}}</p>
+        <img src="https://img.youtube.com/vi/{{youtubeVideoId}}/hqdefault.jpg">
+      </a>
     </section>
+    {{/ each}}
   </div>
