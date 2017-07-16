@@ -167,16 +167,8 @@
   </div>
 
   <div class="row">
-    <section class="col-md-4 col-lg-4">
+    <section class="col-md-4">
       <h2>Jobs</h2>
-    </section>
-    <section class="col-md-8 col-lg-8">
-      <h2>Talks</h2>
-    </section>
-  </div>
-
-  <div class="row">
-    <section class="col-md-4 col-lg-4">
       <ul class="list-unstyled">
         {{# each jobs}}
         <li>
@@ -188,12 +180,17 @@
       <a href="mailto:mark.f.bennett+ejs-jobs@gmail.com" class="btn btn-default">Submit your job!</a>
     </section>
 
-    {{# each talks}}
-    <section class="col-md-4 col-lg-4">
-      <a href="https://www.youtube.com/watch?v={{youtubeVideoId}}">
-        <p><strong>{{title}}</strong> by <em>{{speaker.name.first}}</p>
-        <img src="https://img.youtube.com/vi/{{youtubeVideoId}}/hqdefault.jpg">
-      </a>
+    <section class="col-md-8">
+      <h2><a class="natural" href="/talks">Talks</a></h2>
+      <div class="row">
+        {{# each talks}}
+        <div class="col-sm-6">
+          <a href="https://www.youtube.com/watch?v={{youtubeVideoId}}">
+            <p><strong>{{title}}</strong> by <em>{{speaker.name.first}}</em></p>
+            <img src="https://img.youtube.com/vi/{{youtubeVideoId}}/hqdefault.jpg">
+          </a>
+        </div>
+        {{/ each}}
+      </div>
     </section>
-    {{/ each}}
   </div>
