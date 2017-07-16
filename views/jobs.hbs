@@ -5,18 +5,24 @@
 <table class="table table-hover">
     <thead>
         <th>Company</th>
-        <th>Title</th>
         <th>Location</th>
+        <th>Title</th>
+        <th>Employment Type</th>
         <th>Summary</th>
+        <th></th>
     </thead>
     <tbody>
         {{# each jobs}}
         <tr>
             <td><strong>{{company}}</strong></td>
-            <td><em>{{title}}</em></td>
             <td>{{location}}</td>
+            <td><em>{{title}}</em></td>
+            <td>{{employment_type}}</td>
             <td>{{{summary.html}}}</td>
-            <td><a href="/jobs/{{slug}}">More...</a></td>
+            <td>
+                    <a href="{{url_to_apply}}" class="btn btn-primary btn-block">Apply</a>
+                    <a href="/jobs/{{slug}}" class="btn btn-default btn-block">More...</a>
+            </td>
         </tr>
         {{/each}}
     </tbody>
