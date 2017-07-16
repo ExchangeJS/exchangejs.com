@@ -64,7 +64,7 @@ module.exports = (keystone) => {
 				return next();
 			}
 
-			res.render('job', job);
+			res.redirect(job.url_base);
 		});
 	});
 	
