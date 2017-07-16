@@ -46,6 +46,15 @@ module.exports = (keystone) => {
 		});
 	});
 
+	router.get('/jobs', (req, res, next) => {
+		let jobs = keystone.list('Job').model.
+			find({state: 'published', expires_on: { $gt: new Date() } });
+		
+		jobs.then((jobs) => {
+			res.render('jobs', { title: "Job Listings", jobs });
+		});
+	});
+
 	router.get('/jobs/:slug', (req, res, next) => {
 		keystone.list('Job').model.findOne({
 			slug: req.params.slug

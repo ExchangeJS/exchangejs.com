@@ -1,0 +1,23 @@
+{{!< base.hbs}}
+
+<h2>Jobs</h2>
+
+<table class="table table-hover">
+    <thead>
+        <th>Company</th>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Summary</th>
+    </thead>
+    <tbody>
+        {{# each jobs}}
+        <tr>
+            <td><strong>{{company}}</strong></td>
+            <td><em>{{title}}</em></td>
+            <td>{{location}}</td>
+            <td>{{{summary.html}}}</td>
+            <td><a href="/jobs/{{slug}}">More...</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
