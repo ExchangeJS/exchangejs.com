@@ -178,12 +178,17 @@
       </ul>
     </section>
 
-    {{# each talks}}
-    <section class="col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-1">
-      <a href="https://youtube.com/watch?id={{youtubeVideoId}}"></a>
-      <h2>{{title}}</h2>
-      <p>by <em>{{speaker.name.first}} {{speaker.name.last}}</em> on {{presentedOn}}</p>
-      <img src="youtube url for thumbnal">
+    <section class="col-md-8 col-md-offset-0 col-lg-6 col-lg-offset-1">
+      <h2>Talks</h2>
+      <ul class="list-unstyled index_talks">
+      {{# each talks}}
+        <li>
+          <a href="https://www.youtube.com/watch?v={{youtubeVideoId}}">
+            <p><strong>{{title}}</strong> by <em>{{speaker.name.first}}</p>
+            <img src="https://img.youtube.com/vi/{{youtubeVideoId}}/hqdefault.jpg">
+          </a>
+        </li>
+      {{/ each}}
+      </ul>
     </section>
-    {{/ each}}
   </div>
