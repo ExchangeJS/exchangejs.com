@@ -13,6 +13,7 @@ module.exports = (keystone) => {
 		Promise.all([jobs, talks]).then(([jobs, talks]) => {
 			res.render('index', {
 				title: 'Exchange.js',
+				is_homepage: true,
 				jobs: jobs,
 				talks: talks
 			});
