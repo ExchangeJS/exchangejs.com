@@ -13,31 +13,22 @@
         <h3>Summary</h3>
         {{{ summary.html }}}
 
-        <h3>Work Description</h3>
-        {{{ work_desc.html }}}
+        {{{ details.html }}}
 
-        <h3>Requirements</h3>
-        {{{ requirements.html }}}
-
-        {{#if why_you_should_apply.html}}
-        <h3>Why You Should Apply</h3>
-        {{{ why_you_should_apply.html }}}
+        <a href="{{url_to_apply}}" target="_blank" rel="noopener" class="btn btn-primary">Apply now!</a>
+        {{#if url_to_find_out_more }}
+        <a href="{{url_to_find_out_more}}" target="_blank" rel="noopener" class="btn btn-default">Find out more..</a>
         {{/if}}
-
-        <a href="mailto://{{email_to_apply}}" class="btn btn-primary">Apply now!</a>
-        <a href="{{find_out_more}}" class="btn btn-default">Find out more..</a>
     </section>
     <section class="col-md-4 col-lg-4">
         <p>
-            <a href="mailto://{{email_to_apply}}" class="btn btn-primary btn-lg btn-block">Apply now!</a>
+            <a href="{{url_to_apply}}" target="_blank" rel="noopener" class="btn btn-primary btn-lg btn-block">Apply now!</a>
         </p>
         
         <ul>
             <li><em>{{location}} {{#if is_remote}}(remote work available){{/if}}</em></li>
             {{#if department }}<li>{{department}}</li>{{/if}}
             <li>{{employment_type}}</li>
-            <li>{{minimum_experience}}</li>
-            <li>{{compensation}}, {{comp_type}}</li>
         </ul>
     </section>
 </div>

@@ -168,15 +168,19 @@
 
   <div class="row">
     <section class="col-md-4">
-      <h2>Jobs</h2>
+      <h2><a class="natural" href="/jobs">Jobs</a></h2>
       <ul class="list-unstyled">
         {{# each jobs}}
         <li>
           <a href="/jobs/{{slug}}"><strong>{{title}}</strong> at {{company}}</a>
         </li>
         {{/ each}}
-        <li><a href="/jobs">More...</a></li>
       </ul>
+
+      <p>
+        <a href="/jobs">See all jobs...</a>
+      </p>
+
       <a href="mailto:mark.f.bennett+ejs-jobs@gmail.com" class="btn btn-default">Submit your job!</a>
     </section>
 
