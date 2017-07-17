@@ -20,10 +20,8 @@
             <td>{{employment_type}}</td>
             <td>{{{summary.html}}}</td>
             <td>
-                    <a href="{{url_to_apply}}" class="btn btn-primary btn-block">Apply</a>
-                    {{#if url_base }}
-                        <a href="/jobs/{{slug}}" class="btn btn-default btn-block">More...</a>
-                    {{/if}}
+                <a href="{{url_to_apply}}" class="btn btn-primary btn-block">Apply</a>
+                <a href="/jobs/{{slug}}" class="btn btn-default btn-block">More...</a>
             </td>
         </tr>
         {{/each}}
