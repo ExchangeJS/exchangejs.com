@@ -20,7 +20,7 @@ Job.add({
 	company_logo: { type: Types.Url },
 	location: { type: String, initial: true, required: true },
 	summary: { type: Types.Markdown, wysiwyg: true, required: true, initial: true },
-	url_base: { type: Types.Url, required: true, initial: true },
+	url_base: { type: Types.Url, initial: true },
 	url_to_apply: { type: Types.Url, required: true, initial: true }
 });
 

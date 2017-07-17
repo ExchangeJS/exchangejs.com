@@ -21,7 +21,9 @@
             <td>{{{summary.html}}}</td>
             <td>
                     <a href="{{url_to_apply}}" class="btn btn-primary btn-block">Apply</a>
-                    <a href="/jobs/{{slug}}" class="btn btn-default btn-block">More...</a>
+                    {{#if url_base }}
+                        <a href="/jobs/{{slug}}" class="btn btn-default btn-block">More...</a>
+                    {{/if}}
             </td>
         </tr>
         {{/each}}
