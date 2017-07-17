@@ -17,7 +17,30 @@
   <meta name="google-site-verification" content="LrIXx7tjRAjT26dfDYYOeKgR176Dklrlu4uB1u17u1E" />
 </head>
 <body>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Exchange.js</a>
+      </div>
 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/talks">Talks</a></li>
+          <li><a href="/jobs">Jobs</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+
+  {{#if is_homepage }}
   <div class="jumbotron header">
     <div class="container">
       <!-- <img src="https://www.exchangejs.com/ejs.png" /> -->
@@ -25,6 +48,7 @@
       <h2>Edmonton's JavaScript Community</h2>
     </div>
   </div>
+  {{/if }}
 
   <div class="body">
     <div class="container">

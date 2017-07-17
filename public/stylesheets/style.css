@@ -100,3 +100,11 @@ img {
 .index_talks img {
   width: 100%;
 }
+
+body {
+  padding-top: 50px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #FFCC00;
+}
