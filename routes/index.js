@@ -4,7 +4,7 @@ module.exports = (keystone) => {
 	let router = express.Router();
 
 	/* GET home page. */
-	router.get('/', function(req, res) {
+	router.get('/', (req, res) => {
 		let jobs = keystone.list('Job').model.
 			find({state: 'published', expires_on: { $gt: new Date() } }).limit(5);
 		let talks = keystone.list('Talk').model.find().
@@ -32,11 +32,11 @@ module.exports = (keystone) => {
 			});
 	});
 
-	router.get('/:page', function(req, res, next) {
+	router.get('/:page', (req, res, next) => {
 		keystone.list('Page').model.findOne({
 			state: 'published',
 			slug: req.params.page
-		}).exec(function(err, result) {
+		}).exec((err, result) => {
 			if (!result) {
 				return next();
 			}
@@ -69,8 +69,12 @@ module.exports = (keystone) => {
 		});
 	});
 	
-	router.get('/issues', function(req, res) {
+	router.get('/issues', (req, res) => {
 		res.redirect('https://github.com/ExchangeJS/exchangejs-org/issues');
+	});
+
+	router.get('/sponsorship', (req, res) => {
+		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSdiQn9w6Ghz3VVOTqlhwXj5v5ojLBDoPMc74ciQtq9aWgXNoQ/viewform?usp=sf_link');
 	});
 
 	return router;
