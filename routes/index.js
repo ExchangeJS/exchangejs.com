@@ -4,7 +4,7 @@ module.exports = (keystone) => {
 	let router = express.Router();
 
 	/* GET home page. */
-	router.get('/', function(req, res) {
+	router.get('/', (req, res) => {
 		let jobs = keystone.list('Job').model.
 			find({state: 'published', expires_on: { $gt: new Date() } }).limit(5);
 		let talks = keystone.list('Talk').model.find().
@@ -32,11 +32,11 @@ module.exports = (keystone) => {
 			});
 	});
 
-	router.get('/:page', function(req, res, next) {
+	router.get('/:page', (req, res, next) => {
 		keystone.list('Page').model.findOne({
 			state: 'published',
 			slug: req.params.page
-		}).exec(function(err, result) {
+		}).exec((err, result) => {
 			if (!result) {
 				return next();
 			}
