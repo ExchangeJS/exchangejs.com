@@ -69,8 +69,12 @@ module.exports = (keystone) => {
 		});
 	});
 	
-	router.get('/issues', function(req, res) {
+	router.get('/issues', (req, res) => {
 		res.redirect('https://github.com/ExchangeJS/exchangejs-org/issues');
+	});
+
+	router.get('/sponsorship', (req, res) => {
+		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSdiQn9w6Ghz3VVOTqlhwXj5v5ojLBDoPMc74ciQtq9aWgXNoQ/viewform?usp=sf_link');
 	});
 
 	return router;
