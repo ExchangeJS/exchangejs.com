@@ -10,9 +10,11 @@
 
 <div class="row">
     <section class="col-md-8 col-lg-8">
+        {{#if summary.html }}
         <h3>Summary</h3>
         {{{ summary.html }}}
 
+        {{/if}}
         {{{ details.html }}}
 
         <a href="{{url_to_apply}}" target="_blank" rel="noopener" class="btn btn-primary">Apply now!</a>
