@@ -47,10 +47,10 @@ module.exports = (keystone) => {
 		});
 	});
 
-	router.get('/jobs', (req, res, next) => {
+	router.get('/jobs', (req, res) => {
 		let jobs = keystone.list('Job').model.
 			find({state: 'published', expires_on: { $gt: new Date() } });
-		
+
 		jobs.then((jobs) => {
 			res.render('jobs', { title: "Job Listings", jobs });
 		});
@@ -68,7 +68,15 @@ module.exports = (keystone) => {
 			res.render('job', job);
 		});
 	});
-	
+
+	router.post('/submit-your-job', (req, res, next) => {
+		next()
+	})
+
+	router.get('/submit-your-job', (req, res) => {
+		res.render('submit-job.hbs')
+	})
+
 	router.get('/issues', (req, res) => {
 		res.redirect('https://github.com/ExchangeJS/exchangejs-org/issues');
 	});

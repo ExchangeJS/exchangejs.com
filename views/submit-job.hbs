@@ -1,0 +1,83 @@
+{{!< base.hbs}}
+
+<div class="row">
+    <section class="col-md-12 col-lg-12">
+        <h2>Submit Your Job</h2>
+        <hr />
+    </section>
+</div>
+
+<div class="row">
+    <section class="col-xs-12 col-xs-offset-0 col-md-offset-2 col-md-8">
+      <form action="." method="POST">
+
+        <div class="form-group">
+          <label for="title">Position Title *</label>
+          <input name="title" id="title" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department</label>
+          <input name="department" id="department" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="employment_type">Employment Type *</label>
+          <select class="form-control" name="employment_type" id="employment_type" required>
+            <option value="full-time">Full Time</option>
+            <option value="part-time">Part Time</option>
+            <option value="casual">Casual</option>
+            <option value="contract">Contract</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company Name *</label>
+          <input name="company" id="company" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location *</label>
+          <input name="location" id="location" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label for="summary">Summary *</label>
+          <textarea name="summary" id="summary" class="form-control" required>
+          </textarea>
+          <p class="form-helper">Short description of the job. Plain text only.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Details</label>
+          <textarea name="details" id="details" class="form-control" rows="10">
+          </textarea>
+          <p class="form-helper">Longer description of the job. You may use markdown.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="url_to_find_out_more">Link</label>
+          <input type="url" name="url_to_find_out_more" id="url_to_find_out_more" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="url_to_apply">Link to Apply</label>
+          <input type="url" name="url_to_apply" id="url_to_apply" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label for="expires_on">Expires On *</label>
+          <input type="date" name="expires_on" id="expires_on" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label for="contact_email">Your Email *</label>
+          <input type="url" name="contact_email" id="contact_email" class="form-control" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </form>
+
+
+    </section>
+</div>

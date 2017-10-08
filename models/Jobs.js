@@ -12,8 +12,9 @@ var Job = new keystone.List('Job', {
 });
 
 Job.add({
-	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
+	state: { type: Types.Select, options: 'submitted, draft, published, archived', default: 'draft', index: true },
 	expires_on: { type: Types.Date, initial: true, required: true },
+	contact_email: { type: Types.Email },
 	title: { type: String, initial: true, required: true },
 	department: { type: String },
 	employment_type: { type: Types.Select, options: 'full-time, part-time, casual, contract', default: 'full-time', required: true },
