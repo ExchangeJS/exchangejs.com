@@ -9,7 +9,19 @@
 
 <div class="row">
     <section class="col-xs-12 col-xs-offset-0 col-md-offset-2 col-md-8">
-      <form action="." method="POST">
+      {{#if error}}
+        <div class="alert alert-danger">
+          {{error}}
+        </div>
+      {{/if}}
+      {{#if submitted}}
+        <div class="alert alert-success">
+          Thank you for your submission.
+        </div>
+      {{/if}}
+
+      <form method="POST">
+        <input type="hidden" name="_csrf" value="{{token}}">
 
         <div class="form-group">
           <label for="title">Position Title *</label>
@@ -43,15 +55,13 @@
 
         <div class="form-group">
           <label for="summary">Summary *</label>
-          <textarea name="summary" id="summary" class="form-control" required>
-          </textarea>
+          <textarea name="summary" id="summary" class="form-control" required></textarea>
           <p class="form-helper">Short description of the job. Plain text only.</p>
         </div>
 
         <div class="form-group">
           <label for="details">Details</label>
-          <textarea name="details" id="details" class="form-control" rows="10">
-          </textarea>
+          <textarea name="details" id="details" class="form-control" rows="10"></textarea>
           <p class="form-helper">Longer description of the job. You may use markdown.</p>
         </div>
 
@@ -61,7 +71,7 @@
         </div>
 
         <div class="form-group">
-          <label for="url_to_apply">Link to Apply</label>
+          <label for="url_to_apply">Link to Apply *</label>
           <input type="url" name="url_to_apply" id="url_to_apply" class="form-control" required />
         </div>
 
@@ -72,7 +82,7 @@
 
         <div class="form-group">
           <label for="contact_email">Your Email *</label>
-          <input type="url" name="contact_email" id="contact_email" class="form-control" required />
+          <input type="email" name="contact_email" id="contact_email" class="form-control" required />
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg">Submit</button>

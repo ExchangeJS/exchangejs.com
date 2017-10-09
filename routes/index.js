@@ -1,4 +1,5 @@
 var express = require('express');
+var csrfProtection = require('csurf')({cookie: true})
 
 module.exports = (keystone) => {
 	let router = express.Router();
@@ -69,12 +70,36 @@ module.exports = (keystone) => {
 		});
 	});
 
-	router.post('/submit-your-job', (req, res, next) => {
-		next()
+	router.post('/submit-your-job', csrfProtection, (req, res, next) => {
+		const KEYS = ['title', 'department', 'employment_type', 'company', 'location', 'summary', 'details', 'url_to_find_out_more', 'url_to_apply', 'expires_on', 'contact_email']
+		const formData = Object.assign(
+			Object.keys(req.body).filter(key => KEYS.indexOf(key) !== -1)
+				.reduce((acc, key) => {
+					acc[key] = req.body[key]
+					return acc
+				}, {}),
+			{state: 'submitted'}
+		)
+		const Job = keystone.list('Job')
+		const newJob = new Job.model(formData)
+		newJob.save(err => {
+			if (err && err.status === 403) {
+				req.error = 'Invalid token. Leave us alone.'
+			} else if (err) {
+				req.err = 'Unable to save your submission. Please try again or get in touch with us.'
+			} else {
+				req.submitted = true
+			}
+			next()
+		})
 	})
 
-	router.get('/submit-your-job', (req, res) => {
-		res.render('submit-job.hbs')
+	router.all('/submit-your-job', csrfProtection, (req, res) => {
+		res.render('submit-job.hbs', {
+			error: req.err,
+			token: req.csrfToken(),
+			submitted: req.submitted
+		})
 	})
 
 	router.get('/issues', (req, res) => {
