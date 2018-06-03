@@ -109,6 +109,14 @@ module.exports = (keystone) => {
 	router.get('/sponsorship', (req, res) => {
 		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSdiQn9w6Ghz3VVOTqlhwXj5v5ojLBDoPMc74ciQtq9aWgXNoQ/viewform?usp=sf_link');
 	});
+	
+	router.get('/apply-for-2018-exec'), (req, res) => {
+		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSdleTSavxcazcw74SEa3FO6Tq5Gf1SXGs7KqN2s_MMKxjps0A/viewform?usp=sf_link');
+	});
+	
+	router.get('/2018survey'), (req, res) => {
+		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSfDQLRPfCww18jnwg33tWZQf1HAZi5MoUPf9uPpANYe7irahA/viewform?usp=sf_link');
+	});
 
 	return router;
 }
