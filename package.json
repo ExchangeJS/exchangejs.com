@@ -4,7 +4,8 @@
   "private": false,
   "scripts": {
     "start": "node app.js",
-    "deploy": "NODE_ENV=production webpack  --config webpack.production.config.js"
+    "deploy": "NODE_ENV=production webpack  --config webpack.production.config.js",
+    "dev": "./node_modules/gulp/bin/gulp.js watch"
   },
   "dependencies": {
     "body-parser": "~1.8.1",
