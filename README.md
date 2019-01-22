@@ -30,7 +30,7 @@ You can then run the local development server with:
 
     yarn dev
 
-Once the app is running, go to your localhost:3000/keystone (or, if you changed the URL or port in the config file, whatever is appropriate) and login with 'user@example.com' and 'admin' as the password. Once logged in, select Users and change your information.
+Once the app is running, go to your localhost:8080/keystone (or, if you changed the URL or port in the config file, whatever is appropriate) and login with 'user@example.com' and 'admin' as the password. Once logged in, select Users and change your information.
 
 To deploy your changes just push to GitHub. Once they're merged into master
 they'll deploy to Heroku and our site automatically in a few minutes.

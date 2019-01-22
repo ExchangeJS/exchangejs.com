@@ -35,6 +35,7 @@ const definePlugin = new webpack.DefinePlugin({
 });
 
 const config = {
+	mode: 'production',
 	entry: {
 		index: "./src/index.js",
 		worker: "./src/worker.js"
@@ -44,15 +45,15 @@ const config = {
 		chunkFilename: "./public/javascripts/[id].bundle.js"
 	},
 	module: {
-		loaders: [{
+		rules: [{
 			test: /\.js$/,
 
-			// There is not need to run the loader through
+			// There is no need to run the loader through
 			// vendors
 			exclude: [node_modules_dir],
-			loader: 'babel',
+			loader: 'babel-loader',
 			query: {
-				presets: ['es2015']
+				presets: ['@babel/env']
 			}
 		}]
 	},
