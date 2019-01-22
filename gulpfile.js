@@ -28,8 +28,7 @@ gulp.task('watch', function () {
 		// server-side as well.
 		watch: ['app.js', 'models/**/*.js', 'routes/**/*.js']
 
-	})
-	.once('start', function() {
+	}).once('start', function() {
 		browserSync.init({
 			proxy: 'http://localhost:' + process.env.PORT,
 			port: (parseInt(process.env.PORT, 10) + 1)
