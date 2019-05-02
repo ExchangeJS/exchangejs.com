@@ -119,5 +119,13 @@ module.exports = (keystone) => {
 		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSeLRajdq62zJ2v5CwPFH2VUn3GuX7XAhb9bHybc5l5r49qhqA/viewform?usp=sf_link');
 	});
 
+	router.get('/lightning', (req, res) => {
+		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSeLRajdq62zJ2v5CwPFH2VUn3GuX7XAhb9bHybc5l5r49qhqA/viewform?usp=sf_link');
+	});
+
+	router.get('/voting', (req, res) => {
+		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSeLRajdq62zJ2v5CwPFH2VUn3GuX7XAhb9bHybc5l5r49qhqA/viewform?usp=sf_link');
+	});
+
 	return router;
 }
