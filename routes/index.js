@@ -115,5 +115,9 @@ module.exports = (keystone) => {
 		res.redirect('https://devedmonton-invite.herokuapp.com/');
 	});
 
+	router.get('/lightning2019', (req, res) => {
+		res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSeLRajdq62zJ2v5CwPFH2VUn3GuX7XAhb9bHybc5l5r49qhqA/viewform?usp=sf_link');
+	});
+
 	return router;
 }
