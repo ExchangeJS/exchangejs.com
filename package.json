@@ -2,6 +2,9 @@
   "name": "exchangejs.com",
   "version": "0.1.0",
   "private": false,
+  "engines": {
+    "node": "10.16.0"
+  },
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.production.config.js",
     "start": "node app.js",
