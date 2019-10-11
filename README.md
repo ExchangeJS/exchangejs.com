@@ -10,8 +10,7 @@ Before trying to get started, make sure you've installed:
 
  * [Node.js](https://nodejs.org/en/download/)
  * [Yarn package manager](https://yarnpkg.com/en/docs/install)
- * [Mongodb](https://www.mongodb.com/B
-
+ * [Mongodb](https://www.mongodb.com/)
 
  ### MongoDb
 
