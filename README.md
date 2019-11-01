@@ -12,9 +12,17 @@ Before trying to get started, make sure you've installed:
  * [Yarn package manager](https://yarnpkg.com/en/docs/install)
  * [Mongodb](https://www.mongodb.com/)
 
+ ### MongoDb
+
  Mongodb needs to be running before you can start things up. If you installed it with Homebrew then you can do this with:
 
     brew services start mongodb
+
+If you are on a later version of Mac (Mojave) you may need to use these intrusctions for [Mongodb](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
+
+     brew services start mongodb-community@4.2
+
+### Yarn and Local settings    
 
 Next, install your dependencies:
 
@@ -25,6 +33,9 @@ Crop here create a copy of the `.env` that configures environmental variables fo
     cp .env_example .env
 
 Edit it and update your MONGO_URI, COOKIE_SECRET, and URL settings.
+  * The default mongoDB url is typically mongodb://127.0.0.1:27017
+  * The default cookie can be any string (e.g. "nomnomnom")
+  * The default URL from the example is http://localhost:3000
 
 You can then run the local development server with:
 
