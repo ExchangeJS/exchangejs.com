@@ -1,6 +1,6 @@
-node_modules/*
-npm-debug.log
-.env
-public/javascripts/*
-.DS_Store
-package-lock.json
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# Useful .gitignore templates: https://github.com/github/gitignore
+node_modules
+dist
+.cache
