@@ -309,7 +309,7 @@ body {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     & .card {
       width: 260px;
       height: 300px;
