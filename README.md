@@ -6,6 +6,10 @@ We are tracking all issues on the [exchangejs.github.io repository](https://gith
 
 ## Getting Started
 
+This site was bootstrapped using [https://html5boilerplate.com/](https://html5boilerplate.com/).
+
+You can find some guidance and tips on the site structure in the `docs` folder.
+
 Before trying to get started, make sure you've installed:
 
  * [Node.js](https://nodejs.org/en/download/)
