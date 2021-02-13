@@ -1,0 +1,12 @@
+{
+  "short_name": "exchangejs.com",
+  "name": "Exchange JS",
+  "icons": [{
+    "src": "ejs.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fafafa",
+  "theme_color": "#FFCC00"
+}
