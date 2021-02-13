@@ -23,5 +23,8 @@
     "@parcel/transformer-sass": "^2.0.0-alpha.3",
     "parcel": "^2.0.0-nightly.579",
     "sass": "^1.32.7"
+  },
+  "dependencies": {
+    "bulma": "^0.9.2"
   }
 }

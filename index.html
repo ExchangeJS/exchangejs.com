@@ -19,17 +19,58 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.scss" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="theme-color" content="#FFCC00" />
   </head>
 
   <body>
     <!-- Add your site or application content here -->
-    <div class="main-content">
-      <img src="ejs.png" alt="ejs logo">
-      <p>Exchange JS: Edmonton's Javascript Community</p>
+    <div class="main-hero">
+      <div class="hero__content">
+        <span class="ejs-text">ejs</span>
+        <h2>Exchange JS: Edmonton's Javascript Community</h2>
+        <p>
+          Exchange JS is a group for Javascript developers and anyone interested
+          in Javascript.
+        </p>
+        <p>We are based in and around Edmonton, AB.</p>
+      </div>
     </div>
 
-
+    <div class="get-involved">
+      <h2 class="title is-4">Get Involved</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="img/slack.svg" alt="slack" />
+          <p>
+            Join our slack workspace to network with other developers. Or share
+            some <a href="https://cataas.com/cat/gif">cat gifs</a>.
+          </p>
+          <a href="https://devedmonton-invite.herokuapp.com/"
+            ><button class="button is-link">Join Slack</button></a
+          >
+        </div>
+        <div class="card">
+          <img src="img/meetup.png" alt="meetup" />
+          <p>Find local javascript related events and talks.</p>
+          <a href="https://www.meetup.com/startupedmonton/"
+            ><button class="button is-link">View Meetups</button></a
+          >
+        </div>
+        <div class="card">
+          <img class="p-4" src="img/yt_logo_rgb_light.png" alt="youtube" />
+          <p>View our Javascript related talks on the devedmonton youtube channel.</p>
+          <a href="https://www.youtube.com/c/DevEdmonton/search?query=exchangejs"
+            ><button class="button is-link">View Talks</button></a
+          >
+        </div>
+      </div>
+    </div>
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>

@@ -1,4 +1,4 @@
- [![Join the chat at https://gitter.im/ExchangeJS/exchangejs.github.io](https://badges.gitter.im/ExchangeJS/exchangejs.github.io.svg)](https://gitter.im/ExchangeJS/exchangejs.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+ [![Netlify Status](https://api.netlify.com/api/v1/badges/77681fd0-43a7-4eeb-8085-e01a57260642/deploy-status)](https://app.netlify.com/sites/exchangejs/deploys) [![Join the chat at https://gitter.im/ExchangeJS/exchangejs.github.io](https://badges.gitter.im/ExchangeJS/exchangejs.github.io.svg)](https://gitter.im/ExchangeJS/exchangejs.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This is repo for the [ExchangeJS website](http://www.exchangejs.com).
 
