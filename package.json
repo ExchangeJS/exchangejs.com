@@ -17,7 +17,9 @@
     "build": "npm run test && parcel build index.html",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
-    "test": "prettier --check 'css/**/*.{css,scss}' 'js/*.js' '**/*.html'"
+    "test": "npm run formatCheck",
+    "formatCheck": "prettier -c 'css/**/*.{css,scss}' 'js/*.js' '!js/vendor/**/*.js' '**/*.html' '!dist/**/*'",
+    "format": "prettier -w 'css/**/*.{css,scss}' 'js/*.js' '!js/vendor/**/*.js' '**/*.html' '!dist/**/*'"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-alpha.3",
