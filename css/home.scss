@@ -1,0 +1,60 @@
+.main-hero {
+  color: #363636;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $brand-primary;
+  min-height: 320px;
+  & .hero__content {
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    & .ejs-text {
+      font-size: 4rem;
+    }
+    & > h2 {
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    & p {
+      margin: 0.25rem;
+    }
+  }
+}
+
+.get-involved {
+  padding: 2rem 0.5rem;
+  & h2 {
+    text-align: center;
+    font-weight: bold;
+  }
+  & .card-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    & .card {
+      width: 260px;
+      height: 320px;
+      padding: 1.5rem;
+      margin: 1rem;
+      display: grid;
+      grid-template-rows: 60px 1fr auto;
+      & > img {
+        max-height: 100%;
+        justify-self: center;
+      }
+      & > p {
+        padding: 0.5rem;
+      }
+      & > a {
+        padding: 0.5rem;
+        text-align: center;
+      }
+    }
+  }
+}
