@@ -2,8 +2,6 @@
 
 This is repo for the [ExchangeJS website](http://www.exchangejs.com).
 
-We are tracking all issues on the [exchangejs.github.io repository](https://github.com/ExchangeJS/exchangejs.github.io/issues).
-
 ## Getting Started
 
 This site was bootstrapped using [https://html5boilerplate.com/](https://html5boilerplate.com/).
@@ -22,9 +20,9 @@ Before trying to get started, make sure you've installed:
 
  You can start a development server with:
 
-    npm run start
+    npm run dev
 
 Once the development server is running you will be given a local URL where you can view your changes.
 
 To deploy your changes just push to GitHub. Once they're merged into master
-they'll deploy to our site automatically in a few minutes.
+they'll deploy to our site automatically.
