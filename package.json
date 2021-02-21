@@ -14,7 +14,7 @@
     "url": "https://github.com/ExchangeJS/exchangejs.com"
   },
   "scripts": {
-    "build": "npm run test && parcel build index.html",
+    "build": "npm run test && parcel build *.html",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
     "test": "npm run formatCheck",
@@ -22,8 +22,8 @@
     "format": "prettier -w 'css/**/*.{css,scss}' 'js/*.js' '!js/vendor/**/*.js' '**/*.html' '!dist/**/*'"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-alpha.3",
-    "parcel": "^2.0.0-nightly.579",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-robot": "^1.0.0",
     "prettier": "^2.2.1",
     "sass": "^1.32.7"
   },
