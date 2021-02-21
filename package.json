@@ -14,16 +14,28 @@
     "url": "https://github.com/ExchangeJS/exchangejs.com"
   },
   "scripts": {
-    "build": "npm run test && parcel build *.html",
-    "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
+    "build": "npm run test && parcel build *.html && npm run moveStatic",
+    "dev": "parcel serve index.html",
+    "start": "npm run dev",
     "test": "npm run formatCheck",
     "formatCheck": "prettier -c 'css/**/*.{css,scss}' 'js/*.js' '!js/vendor/**/*.js' '**/*.html' '!dist/**/*'",
-    "format": "prettier -w 'css/**/*.{css,scss}' 'js/*.js' '!js/vendor/**/*.js' '**/*.html' '!dist/**/*'"
+    "format": "prettier -w 'css/**/*.{css,scss}' 'js/*.js' '!js/vendor/**/*.js' '**/*.html' '!dist/**/*'",
+    "moveStatic": "cp static/* dist"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-robot": "^1.0.0",
+    "@parcel/optimizer-cssnano": "^2.0.0-nightly.605",
+    "@parcel/optimizer-htmlnano": "^2.0.0-nightly.605",
+    "@parcel/packager-css": "^2.0.0-nightly.605",
+    "@parcel/packager-html": "^2.0.0-nightly.605",
+    "@parcel/packager-raw-url": "^2.0.0-nightly.2227",
+    "@parcel/transformer-css": "^2.0.0-nightly.605",
+    "@parcel/transformer-html": "^2.0.0-nightly.605",
+    "@parcel/transformer-postcss": "^2.0.0-nightly.605",
+    "@parcel/transformer-posthtml": "^2.0.0-nightly.605",
+    "@parcel/transformer-sass": "^2.0.0-nightly.605",
+    "@parcel/transformer-webmanifest": "^2.0.0-nightly.2227",
+    "parcel": "^2.0.0-nightly.603",
+    "postcss": "^8.2.6",
     "prettier": "^2.2.1",
     "sass": "^1.32.7"
   },
