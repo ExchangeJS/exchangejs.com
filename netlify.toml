@@ -1,5 +1,3 @@
 [[redirects]]
   from = "/slack"
   to = "https://devedmonton-invite.herokuapp.com/"
-  status = 200
-  force = true
