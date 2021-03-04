@@ -14,7 +14,7 @@
     "url": "https://github.com/ExchangeJS/exchangejs.com"
   },
   "scripts": {
-    "build": "npm run test && parcel build *.html && npm run moveStatic",
+    "build": "parcel build *.html && npm run moveStatic",
     "dev": "parcel serve index.html",
     "start": "npm run dev",
     "test": "npm run formatCheck",
