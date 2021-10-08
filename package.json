@@ -35,7 +35,7 @@
     "@parcel/transformer-sass": "^2.0.0-nightly.605",
     "@parcel/transformer-webmanifest": "^2.0.0-nightly.2227",
     "parcel": "^2.0.0-nightly.603",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "sass": "^1.32.7"
   },
