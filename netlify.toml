@@ -1,3 +1,7 @@
 [[redirects]]
   from = "/slack"
   to = "https://devedmonton-invite.herokuapp.com/"
+  
+[[redirects]]
+  from = "/talks"
+  to = "https://docs.google.com/spreadsheets/d/1cJBKmuUc88IZqc6e7axIDA8Wq-UwmF15nfYWXffymZU/edit?usp=sharing"
